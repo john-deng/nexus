@@ -38,7 +38,7 @@ objects:
         timeoutSeconds: 600
         updatePeriodSeconds: 1
         post:
-          failurePolicy: Retry
+          failurePolicy: Ignore
           execNewPod:
             containerName: ${SERVICE_NAME}
             command:
