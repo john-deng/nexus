@@ -94,7 +94,7 @@ objects:
         volumes:
         - name: ${SERVICE_NAME}-data
           persistentVolumeClaim:
-            claimName: ${SERVICE_NAME}-data
+            claimName: ${PVC_NAME}
     test: false
     triggers:
     - type: ConfigChange
@@ -146,3 +146,8 @@ parameters:
   name: NEXUS_VERSION
   required: true
   value: 3.3.0
+- description: Sonatype Nexus PVC name 
+  displayName: Sonatype Nexus PVC name
+  name: PVC_NAME
+  required: true
+  value: nexus-pv
